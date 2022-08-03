@@ -8,7 +8,7 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "develop" ]
+    branches: [ "sample" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -24,11 +24,11 @@ jobs:
         run: date +%s > report.txt
 
       - name: Create Pull Request
-        id: shiv09
+        id: pnr
         uses: peter-evans/create-pull-request@v4
         with:
           token: "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"
-          commit-message: Update Geneva images
+          commit-message: Update-Genevaimages
           committer: GitHub <himashivanibathula@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
